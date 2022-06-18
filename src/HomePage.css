@@ -1,0 +1,274 @@
+.HomePageWrapper .heading h1 {
+  padding: 0.7rem 0.2rem;
+  font-size: 4.4rem;
+  color: red;
+  font-family: cursive;
+}
+.logo {
+  width: 4.3rem;
+}
+.HomePageWrapper .heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+}
+img {
+  width: 100%;
+}
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 2.8rem;
+}
+.HomePage .container{
+  background: white;
+  padding: 3.5rem 0rem;
+
+}
+.categories h3,
+.all h1 {
+  background: black;
+  color: #e31f14;
+  padding: 0.4rem 0.6rem;
+  margin: 2rem;
+  cursor: pointer;
+  border-bottom: 3px solid rgb(253, 2, 2);
+}
+.all h1 {
+  font-size: 2rem;
+  letter-spacing: 0.22rem;
+}
+.all {
+  width: fit-content;
+  margin: auto;
+}
+.down {
+  width: 1rem;
+}
+.none {
+  display: none;
+}
+.scrollDown {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+.HomePageWrapper {
+  background-color: black;
+  max-width: 1800px;
+  margin: auto;
+  height: 100vh;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-bottom: 2rem;
+}
+.search input {
+  width: 48%;
+  height: 3.7rem;
+  outline: none;
+  border: none;
+  padding: 1.4rem;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  background-color: black;
+  box-shadow: 0px 1px 7px rgb(0, 0, 0, 0.1);
+  color: white;
+}
+.search input:focus {
+  background: rgb(0, 0, 0, 0.8);
+}
+.allmoviebtn {
+  display: none;
+}
+.search button {
+  height: 3.7rem;
+  width: 7rem;
+  box-shadow: 0px 1px 7px rgb(0, 0, 0, 0.5);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: hsl(3, 84%, 48%);
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  margin-left: 0.7rem;
+}
+footer {
+  padding: 1rem;
+  background-color: black;
+}
+
+footer .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e31f14;
+  margin-bottom: 0.4rem;
+}
+.links h5 {
+  margin: 2rem;
+  cursor: pointer;
+}
+.links h5:hover {
+  color: #f1f1f1;
+}
+.ig,
+.yt,
+.tw {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 0.5rem;
+  padding: 0.05rem;
+  background: #f1f1f1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.yt {
+  width: 1.67rem;
+  padding: 0.15rem;
+}
+.yt:hover,
+.tw:hover,
+.ig:hover {
+  background: #e31f14;
+}
+.sm {
+  display: flex;
+}
+@media (max-width: 1135px) {
+  .HomePageWrapper .heading h1 {
+    font-size: 3.4rem;
+  }
+}
+@media (max-width: 1035px) {
+  .categories h3 {
+    padding: 0.4rem 0.6rem;
+    margin: 1.4rem;
+  }
+}
+@media (max-width: 821px) {
+  .links h5{
+    margin: 1rem 1.2rem;
+  }
+}
+@media (max-width: 769px) {
+  .HomePageWrapper .heading h1 {
+    font-size: 2.5rem;
+  }
+  .HomePageWrapper .categories h3 {
+    margin: 1.6rem 1rem;
+    font-size: 1.1rem;
+  }
+  .HomePageWrapper .all h1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+  }
+  .HomePageWrapper .search input {
+    height: 2rem;
+    font-weight: normal;
+    font-size: 1rem;
+    width: 60%;
+  }
+  .HomePageWrapper .search button {
+    height: 2.8rem;
+    padding: 0.3rem;
+  }
+  .HomePageWrapper .logo {
+    width: 3rem;
+  }
+  .HomePageWrapper .links h5 {
+    margin: 1.2rem;
+  }
+  .HomePageWrapper .links {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 604px) {
+  .categories h3 {
+    padding: 0.4rem 0.6rem;
+    margin: 1.6rem 0.7rem;
+  }
+}
+@media (max-width: 501px) {
+  .categories{
+    padding-top: 1.2rem;
+  }
+  .categories h3 {
+    padding: 0.4rem 0.6rem;
+    margin: 1.3rem 0.7rem;
+  }
+  .HomePageWrapper .heading h1 {
+    font-size: 1.9rem;
+  }
+  .HomePageWrapper .logo {
+    width: 2.5rem;
+  }
+  .HomePageWrapper .categories h3 {
+    margin: 1rem;
+    padding: 0.28rem 0.45rem;
+  }
+  .HomePageWrapper .search input {
+    height: 2.2rem;
+    padding: 0.5rem;
+  }
+  .HomePageWrapper .search button {
+    height: 2.2rem;
+    width: fit-content;
+    padding: 0.3rem 0.5rem;
+  }
+  .HomePageWrapper .all h1 {
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+  }
+  .HomePageWrapper .links h5 {
+    margin: 0.7rem;
+  }
+}
+@media (max-width: 425px) {
+  .HomePageWrapper .search input {
+    width: 70%;
+  }
+  .HomePageWrapper .container {
+    padding: 1rem;
+  }
+  .HomePageWrapper .search {
+    margin-bottom: 0.7rem;
+  }
+  .HomePageWrapper .heading  {
+    padding: 0.6rem;
+  }
+  .HomePageWrapper .logo {
+    width: 1.9rem;
+  }
+  .HomePageWrapper .search button {
+    margin-left: 0.2rem;
+  }
+}
+@media (max-width: 364px) {
+  .HomePageWrapper .categories h3 {
+    margin: 1rem 0.5rem;
+  }
+}
+@media (max-width: 359px) {
+  .HomePageWrapper .categories h3 {
+    margin: 1rem;
+    font-size: 0.9rem;
+  }
+  .HomePageWrapper .all h1{
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 324px) {
+  .HomePageWrapper .categories h3 {
+    margin: 0.7rem;
+  }
+}
