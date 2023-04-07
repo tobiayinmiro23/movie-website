@@ -22,6 +22,7 @@
   background-color: black;
   position: fixed;
   width: 100%;
+  top:0;
 }
 .AllMoviesContainer .search {
   margin-top: 0rem;
