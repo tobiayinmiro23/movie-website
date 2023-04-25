@@ -238,9 +238,6 @@ img {
   }
 }
 @media (max-width: 368px) {
-  .Allmovies {
-    margin: 1rem 0rem;
-  }
   .btn button {
     padding: 0.8rem;
   }
@@ -251,10 +248,6 @@ img {
   }
   .movieWrapper {
     width: 18rem;
-  }
-  .Allmovies {
-    margin: 1.3rem 0rem;
-    margin: auto;
   }
   .movieContainer {
     margin: 1rem;
