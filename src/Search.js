@@ -9,16 +9,17 @@ function Search() {
     const [movieData,setmovieData]=useState([])
     const [searchmovie,setsearchmovie]=useState('')
     const [loading, setloading] = useState(false)
-
+    const [noResult, setnoResult] = useState(false)
 
     const Search=  ()=>{
         setloading(true)
+        setnoResult(false)
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=4ba0c9d319e748dedd11b904098470a7&query=${searchmovie}&page=1&`)
           .then(res=>res.json())
           .then(data=>{
             setmovieData(data.results)
-            console.log(data)
             setloading(false)
+          if(data.results.length === 0)setnoResult(true)
           })
           .catch(err=>{
             console.log(err)
@@ -41,7 +42,7 @@ function Search() {
                   </div>}
 
                   {
-                      movieData.length ===0  &&
+                      noResult &&
                       <div className='noResult'>
                             <h1>No result</h1>
                       </div>
