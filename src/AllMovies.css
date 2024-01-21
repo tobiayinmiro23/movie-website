@@ -50,7 +50,8 @@
 }
 /* loading animation */
 .anime{
-  padding: 13rem 0rem;
+    padding-top: 35vh;
+
 }
 hr{
   visibility: hidden;
