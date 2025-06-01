@@ -4,9 +4,11 @@ import { Fetch, FetchLatestMovies, FetchLatestTVshow } from '../fetch'
 import { useNavigate } from 'react-router-dom'
 import { headerLink } from '../data/headerData'
 import { resultI } from '../types'
+import path from 'path'
 
 function Others() {
     let pathname: string = window.location.pathname.split('/')[1]
+    console.log(path)
     const validRoute = headerLink.filter(item => item.displayName === pathname)
     const navigate = useNavigate()
     const [error, seterror] = useState<boolean>(false)
@@ -27,7 +29,7 @@ function Others() {
     }
 
     useEffect(() => {
-        if (validRoute.length === 0 && pathname !== 'AllMovies') navigate('/invalidRoute')
+        if (validRoute.length === 0) navigate('/invalidRoute')
         else getData()
     }, [])
 
