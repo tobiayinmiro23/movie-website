@@ -11,7 +11,7 @@ export const headerLink: headerLinkI[] = [
     {
         id: 3,
         genre: '878',
-        displayName: 'Science fiction'
+        displayName: 'Sci-fi'
     },
     {
         id: 4,
