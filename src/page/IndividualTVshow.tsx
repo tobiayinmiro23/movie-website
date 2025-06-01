@@ -98,7 +98,7 @@ const IndividualTVshow = () => {
                             movieData.production_companies.length > 0 &&
                             <div className='pl-[0.3rem] mb-[1rem]' >
                                 <h3 className='font-bold'>Production Companie(s)</h3>
-                                <div className='flex items-end'>
+                                <div>
                                     {movieData.production_companies.map(item => {
                                         return <div key={item.id} className='mr-[3rem]'>
                                             <div className='mb-[1rem]'>
