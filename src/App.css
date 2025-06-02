@@ -1,5 +1,6 @@
 #root {
-  /* max-width: 1280px; */
+  max-width: 1680px;
+  margin: auto;
 }
 
 img {
@@ -19,7 +20,7 @@ a {
   width: 5rem;
   height: 5rem;
   border: 3px solid white;
-  border-top: 4px solid red;
+  border-top: 4px solid black;
   margin: auto;
   border-radius: 50%;
   animation: round 1250ms infinite both;
