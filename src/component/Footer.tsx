@@ -8,7 +8,7 @@ const Footer = () => {
             </div>
             <div className="sm flex max-[680px]:m-[2rem]">
 
-                {footerLinkImg.map((item) => <div key={item.id} className='flex h-[1.7rem] w-[1.7rem] mr-[0.5rem] p-[0.05rem] rounded-[50%] cursor-pointer hover:bg-[#e31f14]'> <img key={item.id} src={item.img} /> </div>)}
+                {footerLinkImg.map((item) => <div key={item.id} className='flex h-[2rem] w-[2rem] mr-[0.5rem] p-[0.05rem] rounded-[50%] cursor-pointer hover:bg-[#e31f14]'> <img key={item.id} src={item.img} /> </div>)}
 
 
             </div>
