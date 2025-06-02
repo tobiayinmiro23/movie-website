@@ -19,11 +19,11 @@ const IndividualTVshow = () => {
             {loading && <Loader />}
             {error && <h1 className='text-center text-[2rem] mt-[9rem] font-bold w-[100%]'>An error occured please try again later</h1>}
             {movieData?.id && <div key={movieData?.id} className="w-[fit-content] m-[auto] mt-[2rem]  ">
-                <div className="movieWrapper w-[85%] m-[auto] max-[307px]:w-[95%] max-[307px]:m-[auto]">
+                <div className="movieWrapper w-[85%] m-[auto] max-[607px]:w-[95%] max-[307px]:m-[auto]">
                     <div className='w-[100%] h-[40rem] max-[687px]:h-[35rem] max-[567px]:h-[30rem] max-[457px]:h-[25rem] max-[387px]:h-[20rem]'>
                         <img src={`https://image.tmdb.org/t/p/w500${movieData?.poster_path}`} className='rounded-[0.3rem]' alt="movie img" />
                     </div>
-                    <h2 className='pl-[0.3rem] cursor-pointer font-bold text-[1.88rem]'>{movieData.name}</h2>
+                    <h2 className='pl-[0.3rem] cursor-pointer font-bold text-[1.88rem] mb-[0.6rem]'>{movieData.name}</h2>
                     <div>
                         {
                             movieData?.overview !== '' &&
@@ -97,20 +97,14 @@ const IndividualTVshow = () => {
                         {
                             movieData.production_companies.length > 0 &&
                             <div className='pl-[0.3rem] mb-[1rem]' >
-                                <h3 className='font-bold'>Production Companie(s)</h3>
+                                <h3 className='font-bold mb-[0.4rem]'>Production Companie(s)</h3>
                                 <div>
                                     {movieData.production_companies.map(item => {
-                                        return <div key={item.id} className='mr-[3rem]'>
+                                        return <div key={item.id} className='mr-[3rem] mb-[1rem] '>
                                             <div className='mb-[1rem]'>
                                                 <div className='w-[4rem] h-[fit-content]'><img src={`https://image.tmdb.org/t/p/w500${item.logo_path}`} className='rounded-[0.3rem]' alt="movie img" /></div>
-                                                <p className='text-[1rem] mr-[2rem]'>{item.name}</p>
+                                                <p className='text-[1rem] mr-[2rem] mb-[0.3rem] '>{item.name}</p>
                                             </div>
-                                            {item.origin_country !== '' &&
-                                                <div>
-                                                    <h3 className='font-bold'>Country of origin</h3>
-                                                    <p>{item.origin_country}</p>
-                                                </div>
-                                            }
                                         </div>
                                     })}
                                 </div>
