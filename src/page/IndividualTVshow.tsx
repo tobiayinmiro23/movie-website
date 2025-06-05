@@ -102,7 +102,7 @@ const IndividualTVshow = () => {
                                     {movieData.production_companies.map(item => {
                                         return <div key={item.id} className='mr-[3rem] mb-[1rem] '>
                                             <div className='mb-[1rem]'>
-                                                <div className='w-[4rem] h-[fit-content]'><img src={`https://image.tmdb.org/t/p/w500${item.logo_path}`} className='rounded-[0.3rem]' alt="movie img" /></div>
+                                                <div className='w-[4rem] h-[fit-content]'><img src={`https://image.tmdb.org/t/p/w500${item.logo_path}`} alt="movie img" /></div>
                                                 <p className='text-[1rem] mr-[2rem] mb-[0.3rem] '>{item.name}</p>
                                             </div>
                                         </div>
@@ -113,9 +113,9 @@ const IndividualTVshow = () => {
                         {
                             movieData.production_countries.length > 0 &&
                             <div className='pl-[0.3rem] mb-[1rem]' >
-                                <h3 className='font-bold'>Production Countries</h3>
-                                <div className='flex items-center'>
-                                    {movieData.production_countries.map((item) => <p key={item.name} className='text-[1rem] mr-[2rem]'>{item.name}</p>)}
+                                <h3 className='font-bold mb-[0.56rem]'>Production Countries</h3>
+                                <div>
+                                    {movieData.production_countries.map((item) => <p key={item.name} className='text-[1rem] mr-[2rem] mb-[0.4rem]'>{item.name}</p>)}
                                 </div>
                             </div>
                         }
