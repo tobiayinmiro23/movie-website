@@ -1,6 +1,7 @@
 import axios from "axios";
 import { fetchI, loadMoreI, mappedresultI, searchI, fetchIndividualMovieI, fetchIndividualTVshowI } from "../types";
 const apiKey = import.meta.env.VITE_API_KEY;
+// for fetching movies from a particular genre like war, adventure, comedy etc
 export function Fetch({ setloading, setdataReady, setresults, setnoResult, seterror, page, genre }: fetchI) {
     setloading(true)
     setdataReady(false)
@@ -24,6 +25,7 @@ export function Fetch({ setloading, setdataReady, setresults, setnoResult, seter
         setloading(false)
     })
 }
+// for fetching the latest tv shows 
 export function FetchLatestTVshow({ setloading, setdataReady, setresults, setnoResult, seterror, page }: fetchI) {
     setloading(true)
     setdataReady(false)
@@ -47,6 +49,7 @@ export function FetchLatestTVshow({ setloading, setdataReady, setresults, setnoR
         setloading(false)
     })
 }
+// for fetching latest movies  
 export function FetchLatestMovies({ setloading, setdataReady, setresults, setnoResult, seterror, page }: fetchI) {
     setloading(true)
     setdataReady(false)
@@ -70,7 +73,8 @@ export function FetchLatestMovies({ setloading, setdataReady, setresults, setnoR
         setloading(false)
     })
 }
-export function Search({ setloading, setdataReady, setresults, setnoResult, seterror, search, page }: searchI) {
+// for searching for a movie 
+export function Search({ setloading, setdataReady, setresults, setnoResult, seterror, search, page, setpage }: searchI) {
     setloading(true)
     setnoResult(false)
     setresults(null)
@@ -81,6 +85,7 @@ export function Search({ setloading, setdataReady, setresults, setnoResult, sete
     };
     axios.request(options).then(res => {
         setloading(false)
+        if (res.data.page === res.data.total_pages) setpage(0)
         if (res?.data.results?.length === 0) setnoResult(true)
         else {
             setresults(res?.data.results)
@@ -92,6 +97,7 @@ export function Search({ setloading, setdataReady, setresults, setnoResult, sete
         setloading(false)
     })
 }
+// for fetching a specific movie from 
 export function FetchIndividualMovie({ setloading, setmovieData, seterror, id }: fetchIndividualMovieI) {
     setloading(true)
     seterror(false)
@@ -108,6 +114,7 @@ export function FetchIndividualMovie({ setloading, setmovieData, seterror, id }:
         setloading(false)
     })
 }
+// for fetching a specific movie from the latest tv shows section
 export function FetchIndividualTVshow({ setloading, setmovieData, seterror, id }: fetchIndividualTVshowI) {
     setloading(true)
     seterror(false)
@@ -124,6 +131,7 @@ export function FetchIndividualTVshow({ setloading, setmovieData, seterror, id }
         setloading(false)
     })
 }
+// for loading more movies in a particular genre like action, drama, crime etc
 export function LoadMore({ setloadMore, results, genre, page, setpage }: loadMoreI) {
     setloadMore(true)
     const options = {
@@ -139,6 +147,7 @@ export function LoadMore({ setloadMore, results, genre, page, setpage }: loadMor
         setloadMore(false)
     })
 }
+// for loading more movies from a particular search result
 export function LoadMoreSearch({ setloadMore, results, page, search, setpage }: loadMoreI) {
     setloadMore(true)
     const options = {
@@ -154,6 +163,7 @@ export function LoadMoreSearch({ setloadMore, results, page, search, setpage }: 
         setloadMore(false)
     })
 }
+// for loading more movies from the latest tv shows section
 export function LoadMoreLatestTVshows({ setloadMore, results, page, setpage }: loadMoreI) {
     setloadMore(true)
     const options = {
@@ -169,6 +179,7 @@ export function LoadMoreLatestTVshows({ setloadMore, results, page, setpage }: l
         setloadMore(false)
     })
 }
+// for loading more movies from the latest movies section
 export function LoadMoreLatestMovie({ setloadMore, results, page, setpage }: loadMoreI) {
     setloadMore(true)
     const options = {
