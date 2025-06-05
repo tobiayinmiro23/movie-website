@@ -139,6 +139,7 @@ export interface searchI {
     setdataReady: React.Dispatch<React.SetStateAction<boolean>>
     search: string
     page: number
+    setpage: (data: number) => void
 }
 export interface loadMoreI {
     setloadMore: React.Dispatch<React.SetStateAction<boolean>>
