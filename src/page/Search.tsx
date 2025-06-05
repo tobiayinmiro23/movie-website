@@ -14,7 +14,7 @@ function Others() {
     const [page, setpage] = useState<number>(1)
 
     function searchMovie() {
-        Search({ setloading, setdataReady, setnoResult, setresults, seterror, search, page })
+        Search({ setloading, setdataReady, setnoResult, setresults, seterror, search, page, setpage })
     }
 
 
