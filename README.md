@@ -1,6 +1,6 @@
 # movie-website
 
-A movie website built with react, vite, tailwind, typescript,  and TMDB API.
+A movie website built with react, vite, tailwind, typescript, and TMDB API.
 
 ## 🚀 Features
 
@@ -53,11 +53,8 @@ A movie website built with react, vite, tailwind, typescript,  and TMDB API.
 ├── src/                   # Main source code
 │   ├── assets/              # static files
 │   ├── components/          # Reusable UI components
-│   ├── components/ui/       # Reusable shadcn UI components
-│   ├── context/             # For global state management
 │   ├── data/                # For textual data
 │   ├── fetch/               # contains all the fetch requests made to different endpoints
-│   ├── lib/                 # shadcn helper for safely handling Tailwind CSS classes and preventing conflicts.
 │   ├── pages/                # Application screens
 │   ├── types/               # Contains all the types used
 │   ├── AllFiles.jsx         # Centralized imports and exports for easy access to all components and pages from a single file
